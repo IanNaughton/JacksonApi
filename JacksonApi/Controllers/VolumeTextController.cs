@@ -23,6 +23,7 @@ namespace JacksonApi.Controllers
         }
 
         // GET: api/VolumeText/{id}
+        [HttpGet]
         [Route("VolumeText/{id}")]
         public HttpResponseMessage Get(Guid id)
         {
@@ -37,6 +38,7 @@ namespace JacksonApi.Controllers
         }
 
         // GET: api/Acts/{act}/Volume/{volume}
+        [HttpGet]
         [Route("Acts/{act:int}/Volumes/{volume:int}/Text")]
         public HttpResponseMessage Get(int act, int volume)
         {
@@ -51,6 +53,7 @@ namespace JacksonApi.Controllers
         }
 
         // POST: api/VolumeText
+        [HttpPost]
         [Route("Acts/{act:int}/Volumes/{volume:int}/Text")]
         public HttpResponseMessage Post(int act, int volume, [FromBody]Models.VolumeText volumeText)
         {
